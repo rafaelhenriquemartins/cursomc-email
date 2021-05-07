@@ -1,6 +1,5 @@
 package com.nelioalves.cursomc.config;
 
-
 import java.text.ParseException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +14,10 @@ import com.nelioalves.cursomc.services.MockEmailService;
 @Configuration
 @Profile("test")
 public class TestConfig {
-	
+
 	@Autowired
 	private DBService dbService;
+	
 	@Bean
 	public boolean instantiateDatabase() throws ParseException {
 		dbService.instantiateTestDatabase();
@@ -28,5 +28,4 @@ public class TestConfig {
 	public EmailService emailService() {
 		return new MockEmailService();
 	}
-
 }

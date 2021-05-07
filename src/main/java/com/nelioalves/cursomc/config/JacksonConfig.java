@@ -1,3 +1,4 @@
+  
 package com.nelioalves.cursomc.config;
 
 import org.springframework.context.annotation.Bean;
@@ -24,7 +25,6 @@ public class JacksonConfig {
 		};
 		return builder;
 	}
-	
 	@Bean
 	public JavaMailSender jMS (){
 		return new JavaMailSenderImpl();
